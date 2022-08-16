@@ -1,0 +1,32 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.5s linear;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  &__container {
+    z-index: 2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px auto;
+    gap: 8px;
+    height: 100%;
+    overflow: auto;
+    overflow-x: hidden;
+  }
+
+  &__img {
+    border-radius: 8px;
+  }
+}
