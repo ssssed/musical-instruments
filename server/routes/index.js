@@ -1,8 +1,8 @@
 const Router = require('express');
 const router = new Router();
 
-const dataRoutes = require('./dataRoutes');
+const imagesRoutes = require('./imagesRoutes');
 
-router.use('/', dataRoutes);
+router.use('/images', imagesRoutes);
 
 module.exports = router;
