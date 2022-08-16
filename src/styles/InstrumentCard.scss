@@ -1,0 +1,28 @@
+$mainImage : 500px;
+.card {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &__img-container {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__img {
+        width: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+        height: 400px;
+
+        &_mini {
+            width: 33%;
+            border-radius: 8px;
+            object-fit: cover;
+            height: 150px;
+        }
+    }
+}

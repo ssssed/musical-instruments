@@ -1,0 +1,25 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    &__submit {
+        background-color: transparent;
+        border: 1px solid black;
+        width: 200px;
+        margin: 0 auto;
+        padding: 10px 5px;
+    }
+
+    &__textarea {
+        min-height: 40px;
+        max-width: 560px;
+        min-width: 560px;
+        overflow: auto;
+        width: 100%;
+    }
+
+    &__input {
+        padding: 8px 5px;
+    }
+}

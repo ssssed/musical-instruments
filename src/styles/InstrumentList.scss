@@ -1,0 +1,15 @@
+
+.instruments {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(288px, 1fr));
+    margin: 0 auto;
+    padding: 60px;
+    gap: 30px;
+    @media screen and (max-width: 1023px) {
+        padding: 20px;
+    }
+    @media screen and (max-width: 767px) {
+        gap: 15px;
+        grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+    }
+}
