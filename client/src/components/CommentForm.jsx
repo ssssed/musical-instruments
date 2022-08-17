@@ -1,15 +1,22 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import '../styles/CommentForm.scss';
+import { postComment } from '../utils/Api';
 
 const CommentForm = ({ setComments }) => {
   const [text, setText] = useState('');
   const [name, setName] = useState('');
-  const handleChangeText = (e) => setText(e.target.value);
-  const handleNameChange = (e) => setName(e.target.value);
-  const handleSubmit = (e) => {
+  const handleChangeText = e => setText(e.target.value);
+  const handleNameChange = e => setName(e.target.value);
+  const { id } = useSelector(state => state.popup);
+  const handleSubmit = e => {
     e.preventDefault();
-    // отправка на сервер text
-    setComments((state) => [
+    const comment = {
+      name,
+      text,
+    };
+    postComment(id, { comment });
+    setComments(state => [
       ...state,
       {
         id: state.length + 1,

@@ -12,10 +12,9 @@ export const getImagesById = async id => {
   return data;
 };
 
-export const postComment = async (id, { name, text }) => {
+export const postComment = async (id, comment) => {
   const data = await axios.post(`${baseUrl}/images/${id}/comments`, {
-    name,
-    text,
+    ...comment,
   });
   return data;
 };

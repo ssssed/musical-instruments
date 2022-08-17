@@ -29,7 +29,6 @@ const Popup = () => {
         setComments(res.data.comments.map(com => JSON.parse(com)))
       );
   }, [id]);
-
   const dispatch = useDispatch();
   const handleClickClose = e => {
     if (e.target.className === 'popup') {
