@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   isOpen: false,
   currentImg: '',
+  id: 0,
 };
 
 const popupSlice = createSlice({
@@ -15,9 +16,13 @@ const popupSlice = createSlice({
     setCurrentImg(state, action) {
       state.currentImg = action.payload;
     },
+    setCurrentIdCard(state, action) {
+      state.id = action.payload;
+    },
   },
 });
 
-export const { tooglePopupOpen, setCurrentImg } = popupSlice.actions;
+export const { tooglePopupOpen, setCurrentImg, setCurrentIdCard } =
+  popupSlice.actions;
 
 export default popupSlice.reducer;

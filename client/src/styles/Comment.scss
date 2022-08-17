@@ -1,29 +1,26 @@
 .comment {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 5px;
+
+  &__img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 auto;
+  }
+
+  &__info {
     display: flex;
-    align-items: center;
-    background-color: #ffffff;
-    border-radius: 8px;
-    padding: 5px;
+    flex-direction: column;
+    margin: 0 15px 0 0;
+    width: 80px;
+  }
 
-    &__img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        margin: 0 auto;
-    }
-
-    &__info {
-        display: flex;
-        flex-direction: column;
-        margin: 0 15px 0 0;
-    }
-
-    &__name {
-        font-size: 16px;
-        text-align: center;
-    }
-
-    &__text {
-        
-    }
+  &__name {
+    font-size: 16px;
+    text-align: center;
+  }
 }
